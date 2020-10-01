@@ -5,6 +5,7 @@ public class App {
 
     static int secret = 0;
     static int tries = 0;
+    static String[] leaderboard = { "Name", "Tries" };
 
     public static void guess() {
         int answer = -1;
@@ -14,14 +15,22 @@ public class App {
             answer = input.nextInt();
             tries += 1;
 
-            if (answer < secret) {
-                System.out.println("Too low!");
+            if (Math.random() >= 0.7) {
+                System.out.println("Woops, brain fart.... Can't help you here");
             } else {
-                System.out.println("Too high!");
+                if (answer < secret) {
+                    System.out.println("Too low!");
+                } else {
+                    System.out.println("Too high!");
+                }
             }
         }
 
         System.out.println("You took " + tries + " tries!\n");
+
+        System.out.print("Enter your name: ");
+        String leaderboardName = input.nextLine();
+        // Feel free to implement the leaderboard code!
     }
 
     public static void runGame() {
