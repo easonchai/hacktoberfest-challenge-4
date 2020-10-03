@@ -11,6 +11,7 @@
 
 ## Fixed ✅
 - [x] Example fix, copy this as a template!
+- [X] Fixed brain farts
 
 ## Getting Started 🗺️
 - There are 5 bugs 🕷️ found in the source code of the Java project. Find it, solve it, and open a PR!
