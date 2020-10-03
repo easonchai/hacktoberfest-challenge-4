@@ -1,0 +1,20 @@
+Store
+- id
+- name
+- category
+- description
+- published_date
+- url
+- store_image
+
+Mall
+- space_qty
+- store_count (Number of stores that are open/valid)
+
+Space
+- id
+- buyer
+- renter (rented_to)
+- status (Rented/Sold)
+- expiry_block
+- rental_earned 
