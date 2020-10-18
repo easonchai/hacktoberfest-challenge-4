@@ -9,7 +9,7 @@ dadada
 - Don't destroy anything important in this section!
 - Have fun and support other open source projects!
 
-## Fixed ✅
+## Fixed ✅not fixed
 - [x] Example fix, copy this as a template!
 
 ## Getting Started 🗺️
