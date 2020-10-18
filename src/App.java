@@ -34,22 +34,37 @@ public class App {
     }
 
     public static void runGame() {
-        System.out.println("=== Guess the number! ===");
-        System.out.println("1. Easy (1-10) ");
-        System.out.println("2. Intermediate (1-100) ");
-        System.out.println("3. God Mode (1-100000000) ");
-        System.out.println("4. Exit ");
-        System.out.print("Choose difficulty: ");
-        int choice = input.nextInt();
+
+        char choice;
+        boolean isValidChoice = false;
+
+        do {
+            System.out.println("=== Guess the number! ===");
+            System.out.println("1. Easy (1-10) ");
+            System.out.println("2. Intermediate (1-100) ");
+            System.out.println("3. God Mode (1-100000000) ");
+            System.out.println("4. Exit ");
+            System.out.print("Choose difficulty: ");
+            choice = input.next().charAt(0);
+
+            if (Character.toString(choice).matches("[1-4]")) {
+                isValidChoice = true;
+            }
+            else {
+                System.out.println("Error: Invalid Choice! Please input only the numbers 1 to 4.");
+            }
+
+        } while (!isValidChoice);
+
 
         switch (choice) {
-            case 1:
+            case '1':
                 secret = (int) ((Math.random() * 10) + 1);
                 break;
-            case 2:
+            case '2':
                 secret = (int) ((Math.random() * 110) + 1);
                 break;
-            case 3:
+            case '3':
                 secret = (int) ((Math.random() * 100000000) + 1);
                 break;
             default:
