@@ -27,6 +27,7 @@ public class App {
         }
 
         System.out.println("You took " + tries + " tries!\n");
+        tries = 0;
 
         System.out.print("Enter your name: ");
         String leaderboardName = input.nextLine();
