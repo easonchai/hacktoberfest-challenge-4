@@ -52,6 +52,9 @@ public class App {
             case 3:
                 secret = (int) ((Math.random() * 100000000) + 1);
                 break;
+            case 4:
+                System.out.println("Thank you!");
+                System.exit(0);
             default:
                 System.out.println("Failed to exit!");
         }
