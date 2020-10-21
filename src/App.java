@@ -28,8 +28,9 @@ public class App {
 
         System.out.println("You took " + tries + " tries!\n");
 
-        System.out.print("Enter your name: ");
+        System.out.println("Enter your name: ");
         String leaderboardName = input.nextLine();
+        tries = 0
         // Feel free to implement the leaderboard code!
     }
 
@@ -52,10 +53,14 @@ public class App {
             case 3:
                 secret = (int) ((Math.random() * 100000000) + 1);
                 break;
+            case 4:
+                System.exit(0);
             default:
                 System.out.println("Failed to exit!");
+
         }
         guess();
+
     }
 
     public static void main(String[] args) throws Exception {
