@@ -27,6 +27,7 @@ public class App {
         }
 
         System.out.println("You took " + tries + " tries!\n");
+        tries = 0;
 
         System.out.print("Enter your name: ");
         String leaderboardName = input.nextLine();
@@ -44,14 +45,17 @@ public class App {
 
         switch (choice) {
             case 1:
-                secret = (int) ((Math.random() * 10) + 1);
+                secret = (int) ((Math.random() * (10 - 1)) + 1);
                 break;
             case 2:
-                secret = (int) ((Math.random() * 110) + 1);
+                secret = (int) ((Math.random() * (100 - 1)) + 1);
                 break;
             case 3:
-                secret = (int) ((Math.random() * 100000000) + 1);
+                secret = (int) ((Math.random() * (100000000 - 1)) + 1);
                 break;
+            case 4:
+                System.out.println("Thank you!");
+                System.exit(0);
             default:
                 System.out.println("Failed to exit!");
         }
