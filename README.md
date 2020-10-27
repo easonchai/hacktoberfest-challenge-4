@@ -10,7 +10,10 @@
 - Have fun and support other open source projects!
 
 ## Fixed ✅
-- [x] Example fix, copy this as a template!
+- Removed line 18-20
+- Added else if (answer > secret) statement in line 23
+- Changed nextLine() method to next() method in line 32
+- Added case 4 to end the program in switch case condition
 
 ## Getting Started 🗺️
 - There are 5 bugs 🕷️ found in the source code of the Java project. Find it, solve it, and open a PR!
