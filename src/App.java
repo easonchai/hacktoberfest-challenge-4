@@ -15,22 +15,23 @@ public class App {
             answer = input.nextInt();
             tries += 1;
 
-            if (Math.random() >= 0.7) {
-                System.out.println("Woops, brain fart.... Can't help you here");
-            } else {
+            // if (Math.random() >= 0.7) {
+            //     System.out.println("Woops, brain fart.... Can't help you here");
+            // } else {
                 if (answer < secret) {
                     System.out.println("Too low!");
-                } else {
+                } else if (answer > secret){
                     System.out.println("Too high!");
                 }
-            }
+                
         }
 
         System.out.println("You took " + tries + " tries!\n");
 
         System.out.print("Enter your name: ");
-        String leaderboardName = input.nextLine();
+        String leaderboardName = input.next();
         // Feel free to implement the leaderboard code!
+        
     }
 
     public static void runGame() {
@@ -52,6 +53,8 @@ public class App {
             case 3:
                 secret = (int) ((Math.random() * 100000000) + 1);
                 break;
+            case 4:
+                System.exit(0);             
             default:
                 System.out.println("Failed to exit!");
         }
