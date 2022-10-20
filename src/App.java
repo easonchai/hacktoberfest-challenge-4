@@ -30,10 +30,13 @@ public class App {
 
         System.out.print("Enter your name: ");
         String leaderboardName = input.nextLine();
+        // Snigdha-Sharma: Added this statement since nextLine does not work as last command. This takes newline character as input
+        //hence waits to take the name as input
+        input.nextLine();
         // Feel free to implement the leaderboard code!
     }
 
-    public static void runGame() {
+    public static boolean runGame() {
         System.out.println("=== Guess the number! ===");
         System.out.println("1. Easy (1-10) ");
         System.out.println("2. Intermediate (1-100) ");
@@ -52,15 +55,23 @@ public class App {
             case 3:
                 secret = (int) ((Math.random() * 100000000) + 1);
                 break;
+            case 4:
+            //Snigdha-Sharma: Added case block for exit case and made necessary return data type changes.
+                return false;
             default:
                 System.out.println("Failed to exit!");
         }
         guess();
+        return true;
     }
 
     public static void main(String[] args) throws Exception {
         while (true) {
-            runGame();
+            boolean isExit=runGame();
+            if (!isExit)
+            {
+                return;
+            }
         }
     }
 }
